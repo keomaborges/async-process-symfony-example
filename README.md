@@ -1,8 +1,9 @@
 # How to run an asynchronous process from the Controller in Symfony Framework 4.4
 
-- See `\App\Controller\MyController::runAsyncProcess`
-- Then `\App\AsyncResponse`
-- And finally `\App\EventSubscriber::onTerminate`
+- Clone and `composer install` this repo
+- See [`\App\Controller\MyController::runAsyncProcess`](https://github.com/keomaborges/async-process-symfony-example/blob/master/src/Controller/MyController.php)
+- Then [`\App\AsyncResponse`](https://github.com/keomaborges/async-process-symfony-example/blob/master/src/AsyncResponse.php)
+- And finally [`\App\EventSubscriber::onTerminate`](https://github.com/keomaborges/async-process-symfony-example/blob/master/src/EventSubscriber.php#L24)
 
 After understanding how it works, see it working.
 
