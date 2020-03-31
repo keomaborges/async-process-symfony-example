@@ -1,0 +1,7 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+async:
+    path: async/{urlParam}
+    controller: App\Controller\MyController:runAsyncProcess
+    methods: ['POST']
