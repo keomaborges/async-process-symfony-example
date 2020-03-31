@@ -7,6 +7,10 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * Class AsyncResponse
  *
+ * This is our response class. It can uses as many as parameters we want for
+ * running a process, command or doing stuff in the EventSubscriber.
+ * @see EventSubscriber
+ *
  * @package App
  */
 class AsyncResponse extends Response

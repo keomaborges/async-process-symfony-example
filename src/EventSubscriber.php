@@ -24,6 +24,14 @@ class EventSubscriber implements EventSubscriberInterface
     public function onTerminate(TerminateEvent $event)
     {
         $response = $event->getResponse();
+        /**
+         * If the response is an instance of the type AsyncResponse, the code
+         * below will be processed and a file should be created on public directory.
+         *
+         * In here you can do anything, like either running an existing command,
+         * a process or a heavy service.
+         */
+
         if ($response instanceof AsyncResponse) {
             sleep(5); //adding some drama
 

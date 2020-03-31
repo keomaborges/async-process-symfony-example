@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\AsyncResponse;
+use App\EventSubscriber;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
@@ -18,6 +19,11 @@ class MyController extends AbstractController
      */
     public function runAsyncProcess(string $urlParam)
     {
+        /**
+         * This endpoint only returns a response. After the returning, the event
+         * on-terminate will be dispatched.
+         * @see EventSubscriber
+         */
         return new AsyncResponse($urlParam);
     }
 }
